@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "serverTime":1591105745522,
+  "serverTimeString":"2020-06-02T13:49:05.522Z",
+  "serverName":"vinid-cassandra-2-0-2-release-b8bfcdddf-64c78 (10.42.2.237) ",
+  "executionTimeMS":3,
+  "result":"OK",
+  "error":false
+}

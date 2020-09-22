@@ -1,0 +1,442 @@
+[
+	{
+		"url": "/rve-janino-service/execute/vehicle/vocab/org.autodatacorp.scripts.vindescription.common-VinDescriptionScript.java",
+		"method": "PUT",
+		"cppMockResponseCode": 200,
+		"cppMockResponse": {
+			"serverTime": 1589819172125,
+			"serverTimeString": "2020-05-18T16:26:12.125Z",
+			"serverName": "LPT1979 (10.200.0.33) ",
+			"message": {
+				"vehicles": [
+					{
+						"styleId": "999400",
+						"year": "2014",
+						"make": "Chevrolet777",
+						"model": "Cruze222",
+						"trim": "1LT",
+						"styleDescription": "",
+						"baseMsrp": 19910,
+						"drive": "FWD",
+						"bodyType": "",
+						"wheelbase": "105.7",
+						"standardCurbWeight": 3118,
+						"standardPayload": 899,
+						"standardTowingCapacity": 1000,
+						"gvwrLow": 4321
+					}
+				],
+				"engines": [
+					{
+						"featureId": 21690,
+						"featureKey": "21690-FAB0503",
+						"description": "I4",
+						"featureKeyAnswers": [
+							"FAB05=03"
+						],
+						"styles": [
+							{
+								"styleIds": [
+									"999400"
+								],
+								"optCodes": [
+									"LUV"
+								],
+								"changeOptions": [],
+								"asIccStandardCertain": true,
+								"asBuiltCertain": false,
+								"asStandardCertain": true,
+								"asStandardChangeable": false,
+								"asAvailable": false
+							}
+						],
+						"isNumeric": false,
+						"isAdasFeature": false
+					}
+				],
+				"fuelTypes": [
+					{
+						"featureId": 10030,
+						"featureKey": "10030-FAB0902",
+						"description": "Regular Unleaded",
+						"featureKeyAnswers": [
+							"FAB09=02"
+						],
+						"styles": [
+							{
+								"styleIds": [
+									"357400"
+								],
+								"optCodes": [
+									"LUV"
+								],
+								"changeOptions": [],
+								"asIccStandardCertain": true,
+								"asBuiltCertain": false,
+								"asStandardCertain": true,
+								"asStandardChangeable": false,
+								"asAvailable": false
+							}
+						],
+						"fuelType": "Regular Unleaded",
+						"isNumeric": false,
+						"isAdasFeature": false
+					}
+				],
+				"transmissions": [
+					{
+						"featureId": 10500,
+						"featureKey": "10500-FCB016000202",
+						"description": "6-speed automatic",
+						"featureKeyAnswers": [
+							"FCB02=02",
+							"FCB01=600"
+						],
+						"styles": [
+							{
+								"styleIds": [
+									"357400"
+								],
+								"optCodes": [
+									"MH8"
+								],
+								"changeOptions": [],
+								"asIccStandardCertain": true,
+								"asBuiltCertain": false,
+								"asStandardCertain": true,
+								"asStandardChangeable": false,
+								"asAvailable": false
+							}
+						],
+						"styleId": null,
+						"isNumeric": false,
+						"isAdasFeature": false
+					}
+				],
+				"exteriorColors": [
+					{
+						"code": "G7C",
+						"name": "Red",
+						"genericName": "Red Hot",
+						"primary": null
+					},
+					{
+						"code": "G7J",
+						"name": "Green",
+						"genericName": "Rainforest Green Metallic",
+						"primary": null
+					},
+					{
+						"code": "GAN",
+						"name": "Silver",
+						"genericName": "Silver Ice Metallic",
+						"primary": null
+					},
+					{
+						"code": "GAR",
+						"name": "Black",
+						"genericName": "Black Granite Metallic",
+						"primary": null
+					},
+					{
+						"code": "GAZ",
+						"name": "White",
+						"genericName": "Summit White",
+						"primary": null
+					},
+					{
+						"code": "GBE",
+						"name": "Red",
+						"genericName": "Crystal Red Tintcoat",
+						"primary": null
+					},
+					{
+						"code": "GWT",
+						"name": "Beige",
+						"genericName": "Champagne Silver Metallic",
+						"primary": null
+					},
+					{
+						"code": "GWY",
+						"name": "Blue",
+						"genericName": "Atlantis Blue Metallic",
+						"primary": null
+					},
+					{
+						"code": "GXG",
+						"name": "Gray",
+						"genericName": "Tungsten Metallic",
+						"primary": null
+					},
+					{
+						"code": "GXH",
+						"name": "Blue",
+						"genericName": "Blue Ray Metallic",
+						"primary": null
+					},
+					{
+						"code": "G7C",
+						"name": "Red",
+						"genericName": "Red Hot",
+						"primary": null
+					},
+					{
+						"code": "G7J",
+						"name": "Green",
+						"genericName": "Rainforest Green Metallic",
+						"primary": null
+					},
+					{
+						"code": "GAN",
+						"name": "Silver",
+						"genericName": "Silver Ice Metallic",
+						"primary": null
+					},
+					{
+						"code": "GAR",
+						"name": "Black",
+						"genericName": "Black Granite Metallic",
+						"primary": null
+					},
+					{
+						"code": "GAZ",
+						"name": "White",
+						"genericName": "Summit White",
+						"primary": null
+					},
+					{
+						"code": "GBE",
+						"name": "Red",
+						"genericName": "Crystal Red Tintcoat",
+						"primary": null
+					},
+					{
+						"code": "GWT",
+						"name": "Beige",
+						"genericName": "Champagne Silver Metallic",
+						"primary": null
+					},
+					{
+						"code": "GWY",
+						"name": "Blue",
+						"genericName": "Atlantis Blue Metallic",
+						"primary": null
+					},
+					{
+						"code": "GXG",
+						"name": "Gray",
+						"genericName": "Tungsten Metallic",
+						"primary": null
+					},
+					{
+						"code": "GXH",
+						"name": "Blue",
+						"genericName": "Blue Ray Metallic",
+						"primary": null
+					}
+				],
+				"interiorColors": [
+					{
+						"code": "AFC",
+						"name": "Gray",
+						"genericName": "Medium Titanium",
+						"primary": null
+					},
+					{
+						"code": "AFF",
+						"name": "Black",
+						"genericName": "Jet Black",
+						"primary": null
+					},
+					{
+						"code": "AFG",
+						"name": "Black",
+						"genericName": "Jet Black/Sport Red",
+						"primary": null
+					},
+					{
+						"code": "ABX",
+						"name": "Black",
+						"genericName": "Jet Black",
+						"primary": null
+					},
+					{
+						"code": "AFP",
+						"name": "Gray",
+						"genericName": "Medium Titanium",
+						"primary": null
+					},
+					{
+						"code": "ABY",
+						"name": "Black",
+						"genericName": "Jet Black/Sport Red",
+						"primary": null
+					}
+				],
+				"options": [
+					{
+						"code": "UYE",
+						"msrp": 0,
+						"variations": [
+							{
+								"msrp": 0,
+								"content": [
+									"UZ6",
+									"U2K"
+								],
+								"mustHaves": []
+							}
+						]
+					},
+					{
+						"code": "PDU",
+						"msrp": 995,
+						"variations": [
+							{
+								"msrp": 995,
+								"content": [
+									"CF5",
+									"UQA"
+								],
+								"mustHaves": []
+							}
+						]
+					},
+					{
+						"code": "UFU",
+						"msrp": 0,
+						"variations": [
+							{
+								"msrp": 0,
+								"content": [
+									"UZ6",
+									"U2K"
+								],
+								"mustHaves": []
+							}
+						]
+					},
+					{
+						"code": "PCW",
+						"msrp": 790,
+						"variations": [
+							{
+								"msrp": 790,
+								"content": [
+									"UFT",
+									"UFG",
+									"UD7"
+								],
+								"mustHaves": [
+									"PCR,PDB"
+								]
+							}
+						]
+					},
+					{
+						"code": "PDZ",
+						"msrp": 650,
+						"variations": [
+							{
+								"msrp": 650,
+								"content": [
+									"GNG",
+									"T43",
+									"T3U"
+								],
+								"mustHaves": []
+							}
+						]
+					},
+					{
+						"code": "GAR",
+						"msrp": 225,
+						"variations": [
+							{
+								"msrp": 225,
+								"content": [],
+								"mustHaves": [
+									"PDZ"
+								]
+							}
+						]
+					},
+					{
+						"code": "PCN",
+						"msrp": 0,
+						"variations": [
+							{
+								"msrp": 0,
+								"content": [
+									"VYW",
+									"VAV"
+								],
+								"mustHaves": []
+							}
+						]
+					},
+					{
+						"code": "G7J",
+						"msrp": 325,
+						"variations": [
+							{
+								"msrp": 325,
+								"content": [],
+								"mustHaves": [
+									"PDZ"
+								]
+							}
+						]
+					},
+					{
+						"code": "GBE",
+						"msrp": 325,
+						"variations": [
+							{
+								"msrp": 325,
+								"content": [],
+								"mustHaves": [
+									"PDZ"
+								]
+							}
+						]
+					},
+					{
+						"code": "PCR",
+						"msrp": 550,
+						"variations": [
+							{
+								"msrp": 550,
+								"content": [
+									"UVC",
+									"UFU",
+									"UP9"
+								],
+								"mustHaves": []
+							}
+						]
+					},
+					{
+						"code": "PDB",
+						"msrp": 570,
+						"variations": [
+							{
+								"msrp": 570,
+								"content": [
+									"ADS",
+									"DWE",
+									"BTV",
+									"D6I",
+									"DD8"
+								],
+								"mustHaves": []
+							}
+						]
+					}
+				]
+			},
+			"executionTimeMS": 80925,
+			"error": false
+		}
+	}
+]

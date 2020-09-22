@@ -1,0 +1,106 @@
+name: vin-description-automation_1_0_0
+config:
+  topology.workers: 1
+  topology.max.spout.pending: 10
+  topology.message.timeout.secs: 120
+  rve.janino.service.url: ${rve.janino.service.url}
+  rve.janino.service.timeOut: ${rve.janino.service.timeOut}
+  properties:
+    kafka.mapper.zkPort: ${kafka.mapper.zkPort}
+    kafka.mapper.zkServers: ${kafka.mapper.zkServers}
+    sqlSession.mapper.hikariConfig.dataSource.password: ${sqlSession.mapper.hikariConfig.dataSource.password}
+    sqlSession.mapper.hikariConfig.dataSource.url: ${sqlSession.mapper.hikariConfig.dataSource.url}
+    sqlSession.mapper.hikariConfig.dataSource.user: ${sqlSession.mapper.hikariConfig.dataSource.user}
+    
+    sqlSession.configDataIccMerge.hikariConfig.dataSource.password: ${sqlSession.configDataIccMerge.hikariConfig.dataSource.password}
+    sqlSession.configDataIccMerge.hikariConfig.dataSource.url: ${sqlSession.configDataIccMerge.hikariConfig.dataSource.url}
+    sqlSession.configDataIccMerge.hikariConfig.dataSource.user: ${sqlSession.configDataIccMerge.hikariConfig.dataSource.user}
+   
+    sqlSession.vinDescriptionData.hikariConfig.dataSource.password: ${sqlSession.vinDescriptionData.hikariConfig.dataSource.password}
+    sqlSession.vinDescriptionData.hikariConfig.dataSource.url: ${sqlSession.vinDescriptionData.hikariConfig.dataSource.url}
+    sqlSession.vinDescriptionData.hikariConfig.dataSource.user: ${sqlSession.vinDescriptionData.hikariConfig.dataSource.user}
+    
+    sp.countryLanguage : ${sp.countryLanguage}
+    
+components:
+- id: "rawMessageAndMetadataScheme"
+  className: "org.autodatacorp.cpp.etl.storm.spout.RawMessageAndMetadataScheme"
+  
+- id: "messageMetadataSchemeAsMultiScheme"
+  className: "org.apache.storm.kafka.MessageMetadataSchemeAsMultiScheme"
+  constructorArgs:
+  - ref: "rawMessageAndMetadataScheme"
+  
+- id: "zkHosts"
+  className: "org.apache.storm.kafka.ZkHosts"
+  constructorArgs:
+    - ${kafka.mapper.brokerZkStr}
+      
+- id: "configDataSpoutConfig"
+  className: "org.apache.storm.kafka.SpoutConfig"
+  constructorArgs:
+      # brokerHosts
+      - ref: "zkHosts"
+      # topic
+      - "configData.gvuid"
+      # zkRoot
+      - "/configData.gvuid.kafkaSpout"
+      # id
+      - "configData.gvuid"
+  properties:
+      - name: "scheme"
+        ref: "messageMetadataSchemeAsMultiScheme"
+      - name: zkServers
+        value: ${kafka.mapper.zkServers}
+      - name: zkPort
+        value: ${kafka.mapper.zkPort} 
+      # Retry Properties
+      - name: "retryInitialDelayMs"
+        value: 60000
+      - name: "retryDelayMultiplier"
+        value: 1.5
+      - name: "retryDelayMaxMs"
+        value: 14400000
+      - name: "retryLimit"
+        value: 100
+                
+spouts:
+- id: config-data-kafka-spout
+  className: org.apache.storm.kafka.KafkaSpout
+  constructorArgs:
+  - ref: configDataSpoutConfig
+  
+bolts:
+- id: "global-vehicle-jdbc-lookup-bolt"
+  className: "org.autodatacorp.cpp.etl.vindescription.bolt.GlobalVehicleJdbcLookupBolt"
+  parallelism: 1 
+ 
+- id: "vin-description-bolt"
+  className: "org.autodatacorp.cpp.etl.vindescription.bolt.VinDescriptionBolt"
+  parallelism: 1 
+  
+- id: "vin-description-jdbc-insert-bolt"
+  className: "org.autodatacorp.cpp.etl.vindescription.bolt.VinDescriptionJdbcInsertBolt"
+  parallelism: 1
+    
+#stream definitions
+
+streams:
+- name: "config-data-kafka-spout --> global-vehicle-jdbc-lookup-bolt"
+  from: "config-data-kafka-spout"
+  to: "global-vehicle-jdbc-lookup-bolt"
+  grouping:
+     type: SHUFFLE
+     
+- name: "global-vehicle-jdbc-lookup-bolt--> vin-description-bolt"
+  from: "global-vehicle-jdbc-lookup-bolt"
+  to: "vin-description-bolt"
+  grouping:
+     type: SHUFFLE
+     
+- name: "vin-description-bolt --> vin-description-jdbc-insert-bolt"
+  from: "vin-description-bolt"
+  to: "vin-description-jdbc-insert-bolt"
+  grouping:
+     type: SHUFFLE
+ 

@@ -1,0 +1,69 @@
+variables:
+  REPORT_HOST: "ln-dev-ciserve1.london.autodata.net"
+  REPORT_REMOTE_BASE: "/mnt/AutomationTestingReports/VinDescriptionService"
+  REPORT_LOCAL_BASE: "target/site/serenity"
+  REPORT_SSH_USER: "gitlab-runner"
+  APP_ENVIRONMENT: "DEV"
+  APP_URL: "http://lcoa-dvvd-xap1:8080/vin-description-service/"
+  APP_VERSION: "0.0.0-54280"
+  STORM_ENVIRONMENT: "develop"
+
+.check_variables: &check_variables
+  - for env in APP_URL APP_ENVIRONMENT STORM_ENVIRONMENT;
+    do
+      if [[ -z "${!env}" ]]; then
+        echo "$env is not set";
+        exit -1;
+      fi
+    done
+
+.check_version: &check_version
+  - TEST_VERSION=$(curl "$APP_URL/rest/misc/version" | sed -e 's/.*{"Version":"\([^"]*\).*/\1/g');
+    if [[ -z "$APP_VERSION" ]]; then
+      export APP_VERSION=$TEST_VERSION;
+    elif [[ "$APP_VERSION" != "$TEST_VERSION" ]]; then
+      echo "Target version[$TEST_VERSION] does not match the expected version[$APP_VERSION]";
+      exit -1;
+    fi
+
+.gradle_test: &gradle_test
+  - set +e; gradle test --tests $TEST_SUIT; export result=$?
+
+.gradle_aggregate: &gradle_aggregate
+  - gradle aggregate reports
+
+.upload_report: &upload_report
+  - mkdir -p ~/.ssh
+  - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+  - ssh-keyscan -H $REPORT_HOST >> ~/.ssh/known_hosts
+  - chmod -R 600 ~/.ssh
+  - remote_dir=$REPORT_REMOTE_BASE/$CI_PIPELINE_ID;
+    ssh -i ~/.ssh/id_rsa -t $REPORT_SSH_USER@$REPORT_HOST "mkdir -p $remote_dir";
+    scp -i ~/.ssh/id_rsa -r $REPORT_LOCAL_BASE/* $REPORT_SSH_USER@$REPORT_HOST:$remote_dir
+
+.job_init:
+  before_script:
+    - *check_variables
+    - *check_version
+
+.run_test:
+  extends: .job_init
+  image: gradle
+  stage: test
+  allow_failure: true
+  only:
+    - web
+    - triggers
+  script:
+    - *gradle_test
+    - *gradle_aggregate
+    - *upload_report
+    - exit $result
+
+stages:
+  - test
+
+test_service:
+  extends: .run_test
+  variables:
+    TEST_SUIT: org.autodatacorp.vindescription.service.AutoTestSuite

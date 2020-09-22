@@ -1,0 +1,68 @@
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url "https://nexus-pro.autodatacorp.org/repository/maven-develop/"
+    }
+}
+
+buildscript {
+    ext {
+        serenity_version = '2.1.5'
+        serenity_cucumber4_version = '2.1.2'
+    }
+
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath('net.serenity-bdd:serenity-gradle-plugin:' + serenity_version)
+        classpath('net.serenity-bdd:serenity-single-page-report:' + serenity_version)
+    }
+}
+
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
+    testCompile 'io.rest-assured:json-schema-validator:3.0.0'
+    testCompile 'net.serenity-bdd:serenity-core:' + serenity_version
+    testCompile 'net.serenity-bdd:serenity-screenplay-rest:' + serenity_version
+    testCompile 'net.serenity-bdd:serenity-ensure:' + serenity_version
+    testCompile 'net.serenity-bdd:serenity-cucumber4:' + serenity_cucumber4_version
+    testCompile 'net.javacrumbs.json-unit:json-unit:2.8.0'
+    testCompile "com.jayway.jsonpath:json-path:2.4.0"
+    testCompile("org.junit.jupiter:junit-jupiter-params:5.4.2")
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+    compile group: 'com.mysql.jdbc', name: 'com.springsource.com.mysql.jdbc', version: '5.1.6'
+    testCompile group: 'org.hamcrest', name: 'java-hamcrest', version: '2.0.0.0'
+    testCompile group: 'org.autodatacorp.cpp.etl', name: 'vin-description-lookup-storm', version: '0.0.0-55378'
+
+}
+
+serenity {
+    reports = ["single-page-html"]
+}
+
+configurations.all {
+    resolutionStrategy {
+        force "io.cucumber:cucumber-core:4.8.0"
+    }
+}
+
+gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate)

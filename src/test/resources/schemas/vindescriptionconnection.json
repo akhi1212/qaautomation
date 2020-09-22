@@ -1,0 +1,206 @@
+{
+  "id":"ID-DESKTOP-03KJ5NS-1598011339722-0-1",
+  "serverTime":"Fri Aug 21 17:32:24 IST 2020",
+  "error":false,
+  "executionTimeMS":4843,
+  "copyright":"Copyright 2020 Autodata, Inc. dba ChromeData",
+  "result":[
+    {
+      "serverTime":1598011340668,
+      "serverTimeString":"2020-08-21T12:02:20.668Z",
+      "serverName":"lnoc-q1cp-xmw1.autodatacorp.org (172.16.167.45) ",
+      "executionTimeMS":5,
+      "message":"Runtime CRM Service",
+      "result":{
+        "connections":{
+          "Global Vehicle Master":{
+            "User":"ms_runtimecrm@%",
+            "Server":"lnoc-q1cp-xmy1.autodatacorp.org",
+            "Database":"runtimecrm",
+            "UTCDate":"2020-08-21 12:02:20",
+            "Date":"2020-08-21 12:02:20"
+          }
+        }
+      },
+      "error":false
+    },
+    {
+      "serverTime":1598011341570,
+      "serverTimeString":"2020-08-21T12:02:21.570+0000",
+      "serverName":"cpp-lookup-service-develop.qa1.istest.autodata.tech (10.42.1.76)",
+      "message":"Listing of Connections",
+      "executionTimeMS":0,
+      "message":"Lookup service",
+      "result":{
+        "connections":{
+          "jdbc/cppLookupService":{
+            "User":"readonly",
+            "Server":"lnoc-q1cp-xmy1.autodatacorp.org",
+            "Database":"cpplookup",
+            "UTCDate":"2020-08-09 17:44:30",
+            "Date":"2020-08-09 17:44:30"
+          },
+          "jdbc/vinDescriptionDataSource":{
+            "User":"readwrite",
+            "Server":"lnoc-dvcp-xmy1.autodatacorp.org",
+            "Database":"vindescriptionlookup",
+            "UTCDate":"2020-08-09 17:44:30",
+            "Date":"2020-08-09 17:44:30"
+          }
+        }
+      }
+    },
+    {
+      "serverTime":1598011342490,
+      "serverTimeString":"2020-08-21T12:02:22.490416Z",
+      "serverName":"vinid-cassandra-2-0-2-release-b8bfcdddf-sdkw5 (10.42.1.25) ",
+      "executionTimeMS":2,
+      "message":"VIN ID service",
+      "result":{
+        "connections":{
+          "Build Data Cassandra Datastore":{
+            "Thread/JMV":"Thread ID:268, JVM Name:1@vinid-cassandra-2-0-2-release-b8bfcdddf-sdkw5",
+            "Cluster Name":"prod0",
+            "Host 1":"Datacenter: PORTLAND; Endpoint: /10.100.73.20:9042; Rack: RAC1",
+            "Host 2":"Datacenter: PORTLAND; Endpoint: /10.100.73.21:9042; Rack: RAC1",
+            "Host 3":"Datacenter: PORTLAND; Endpoint: /10.100.73.26:9042; Rack: RAC1",
+            "Host 4":"Datacenter: PORTLAND; Endpoint: /10.100.73.27:9042; Rack: RAC1",
+            "Host 5":"Datacenter: PORTLAND; Endpoint: /10.100.73.28:9042; Rack: RAC1",
+            "Host 6":"Datacenter: PORTLAND; Endpoint: /10.100.73.29:9042; Rack: RAC1",
+            "Host 7":"Datacenter: PORTLAND; Endpoint: /10.100.73.22:9042; Rack: RAC1",
+            "Host 8":"Datacenter: PORTLAND; Endpoint: /10.100.73.23:9042; Rack: RAC1",
+            "Host 9":"Datacenter: PORTLAND; Endpoint: /10.100.73.24:9042; Rack: RAC1",
+            "Host 10":"Datacenter: PORTLAND; Endpoint: /10.100.73.25:9042; Rack: RAC1",
+            "Host 11":"Datacenter: LONDON; Endpoint: /172.16.150.31:9042; Rack: RAC1",
+            "Host 12":"Datacenter: LONDON; Endpoint: /172.16.150.32:9042; Rack: RAC1",
+            "Host 13":"Datacenter: FLINT; Endpoint: /10.0.73.20:9042; Rack: RAC1",
+            "Host 14":"Datacenter: FLINT; Endpoint: /10.0.73.21:9042; Rack: RAC1",
+            "Host 15":"Datacenter: FLINT; Endpoint: /10.0.73.22:9042; Rack: RAC1",
+            "Host 16":"Datacenter: FLINT; Endpoint: /10.0.73.23:9042; Rack: RAC1",
+            "Host 17":"Datacenter: FLINT; Endpoint: /10.0.73.24:9042; Rack: RAC1",
+            "Host 18":"Datacenter: FLINT; Endpoint: /10.0.73.25:9042; Rack: RAC1",
+            "Host 19":"Datacenter: FLINT; Endpoint: /10.0.73.26:9042; Rack: RAC1",
+            "Host 20":"Datacenter: FLINT; Endpoint: /10.0.73.27:9042; Rack: RAC1",
+            "Host 21":"Datacenter: FLINT; Endpoint: /10.0.73.28:9042; Rack: RAC1",
+            "Host 22":"Datacenter: FLINT; Endpoint: /10.0.73.29:9042; Rack: RAC1",
+            "Host 23":"Datacenter: LONDON; Endpoint: lnoc-prcp-csdr1.autodatacorp.org/172.16.150.15:9042; Rack: RAC1",
+            "Host 24":"Datacenter: LONDON; Endpoint: /172.16.150.16:9042; Rack: RAC1",
+            "Host 25":"Datacenter: LONDON; Endpoint: /172.16.150.17:9042; Rack: RAC1",
+            "Host 26":"Datacenter: LONDON; Endpoint: /172.16.150.18:9042; Rack: RAC1",
+            "Host 27":"Datacenter: LONDON; Endpoint: /172.16.150.19:9042; Rack: RAC1",
+            "Host 28":"Datacenter: LONDON; Endpoint: /172.16.150.20:9042; Rack: RAC1",
+            "Host 29":"Datacenter: LONDON; Endpoint: /172.16.150.21:9042; Rack: RAC1",
+            "Host 30":"Datacenter: LONDON; Endpoint: /172.16.150.22:9042; Rack: RAC1",
+            "Host 31":"Datacenter: LONDON; Endpoint: /172.16.150.23:9042; Rack: RAC1",
+            "Host 32":"Datacenter: LONDON; Endpoint: /172.16.150.24:9042; Rack: RAC1",
+            "Host 33":"Datacenter: LONDON; Endpoint: /172.16.150.25:9042; Rack: RAC1",
+            "Host 34":"Datacenter: LONDON; Endpoint: /172.16.150.26:9042; Rack: RAC1",
+            "Host 35":"Datacenter: LONDON; Endpoint: /172.16.150.27:9042; Rack: RAC1",
+            "Host 36":"Datacenter: LONDON; Endpoint: /172.16.150.28:9042; Rack: RAC1",
+            "Number of hosts connected to":"16",
+            "Open Connections":"33",
+            "Trashed Connections":"0",
+            "Known Hosts":"36",
+            "Total Requests":"29553",
+            "Retries required":"2",
+            "Retries failed":"0",
+            "Local Data Center":"LONDON",
+            "Keyspace":"build_data_warehouse",
+            "Login":"cpp_preprod_readwrite",
+            "Connection Reuse Count":"1"
+          },
+          "MySql Datastore":{
+            "User":"readonly@%",
+            "Server":"lnoc-q1cp-xmy1.autodatacorp.org",
+            "Database":"vinpattern_v161",
+            "UTCDate":"2020-08-21 12:02:22",
+            "Date":"2020-08-21 12:02:22"
+          },
+          "Kafka":{
+            "Kafka Consumers":"lnoc-dvcp-xet4:9092",
+            "Kafka Topic":"buildDataUsage"
+          },
+          "VIN Library Cassandra Datastore":{
+            "Thread/JMV":"Thread ID:268, JVM Name:1@vinid-cassandra-2-0-2-release-b8bfcdddf-sdkw5",
+            "Cluster Name":"ASC Test Cluster",
+            "Host 1":"Datacenter: DC1; Endpoint: /172.16.150.14:9042; Rack: RAC1",
+            "Host 2":"Datacenter: DC1; Endpoint: /172.16.150.50:9042; Rack: RAC1",
+            "Host 3":"Datacenter: DC1; Endpoint: /172.16.150.51:9042; Rack: RAC1",
+            "Host 4":"Datacenter: DC1; Endpoint: lcoa-dvtp-xca1.autodatacorp.org/172.16.150.11:9042; Rack: RAC1",
+            "Host 5":"Datacenter: DC1; Endpoint: /172.16.150.12:9042; Rack: RAC1",
+            "Host 6":"Datacenter: DC1; Endpoint: /172.16.150.13:9042; Rack: RAC1",
+            "Number of hosts connected to":"6",
+            "Open Connections":"13",
+            "Trashed Connections":"0",
+            "Known Hosts":"6",
+            "Total Requests":"18805",
+            "Retries required":"0",
+            "Retries failed":"0",
+            "Local Data Center":"DC1",
+            "Keyspace":"vin_library_enhanced_qa",
+            "Login":"cpp_qa_readwrite",
+            "Connection Reuse Count":"1"
+          }
+        }
+      },
+      "error":false
+    },
+    {
+      "serverTime":1598011344137,
+      "serverTimeString":"2020-08-21T12:02:24.137Z",
+      "serverName":"fnoc-prcp-xmw3.autodata.org (10.0.65.205) ",
+      "executionTimeMS":0,
+      "message":"unstructured text service",
+      "result":{
+        "connections":{
+          "Unstructured Text Mapping Database":{
+            "Cluster Name":"prod0",
+            "Host 1":"Datacenter: PORTLAND; Host: /10.100.73.20; Rack: RAC1",
+            "Host 2":"Datacenter: PORTLAND; Host: /10.100.73.21; Rack: RAC1",
+            "Host 3":"Datacenter: PORTLAND; Host: /10.100.73.26; Rack: RAC1",
+            "Host 4":"Datacenter: PORTLAND; Host: /10.100.73.27; Rack: RAC1",
+            "Host 5":"Datacenter: PORTLAND; Host: /10.100.73.28; Rack: RAC1",
+            "Host 6":"Datacenter: PORTLAND; Host: /10.100.73.29; Rack: RAC1",
+            "Host 7":"Datacenter: PORTLAND; Host: /10.100.73.22; Rack: RAC1",
+            "Host 8":"Datacenter: PORTLAND; Host: /10.100.73.23; Rack: RAC1",
+            "Host 9":"Datacenter: PORTLAND; Host: /10.100.73.24; Rack: RAC1",
+            "Host 10":"Datacenter: PORTLAND; Host: /10.100.73.25; Rack: RAC1",
+            "Host 11":"Datacenter: LONDON; Host: /172.16.150.31; Rack: RAC1",
+            "Host 12":"Datacenter: LONDON; Host: /172.16.150.32; Rack: RAC1",
+            "Host 13":"Datacenter: FLINT; Host: fnoc-prcp-csdr1.autodata.org/10.0.73.20; Rack: RAC1",
+            "Host 14":"Datacenter: FLINT; Host: fnoc-prcp-csdr2.autodata.org/10.0.73.21; Rack: RAC1",
+            "Host 15":"Datacenter: FLINT; Host: fnoc-prcp-csdr3.autodata.org/10.0.73.22; Rack: RAC1",
+            "Host 16":"Datacenter: FLINT; Host: /10.0.73.23; Rack: RAC1",
+            "Host 17":"Datacenter: FLINT; Host: /10.0.73.24; Rack: RAC1",
+            "Host 18":"Datacenter: FLINT; Host: /10.0.73.25; Rack: RAC1",
+            "Host 19":"Datacenter: FLINT; Host: /10.0.73.26; Rack: RAC1",
+            "Host 20":"Datacenter: FLINT; Host: /10.0.73.27; Rack: RAC1",
+            "Host 21":"Datacenter: FLINT; Host: /10.0.73.28; Rack: RAC1",
+            "Host 22":"Datacenter: FLINT; Host: /10.0.73.29; Rack: RAC1",
+            "Host 23":"Datacenter: LONDON; Host: /172.16.150.15; Rack: RAC1",
+            "Host 24":"Datacenter: LONDON; Host: /172.16.150.16; Rack: RAC1",
+            "Host 25":"Datacenter: LONDON; Host: /172.16.150.17; Rack: RAC1",
+            "Host 26":"Datacenter: LONDON; Host: /172.16.150.18; Rack: RAC1",
+            "Host 27":"Datacenter: LONDON; Host: /172.16.150.19; Rack: RAC1",
+            "Host 28":"Datacenter: LONDON; Host: /172.16.150.20; Rack: RAC1",
+            "Host 29":"Datacenter: LONDON; Host: /172.16.150.21; Rack: RAC1",
+            "Host 30":"Datacenter: LONDON; Host: /172.16.150.22; Rack: RAC1",
+            "Host 31":"Datacenter: LONDON; Host: /172.16.150.23; Rack: RAC1",
+            "Host 32":"Datacenter: LONDON; Host: /172.16.150.24; Rack: RAC1",
+            "Host 33":"Datacenter: LONDON; Host: /172.16.150.25; Rack: RAC1",
+            "Host 34":"Datacenter: LONDON; Host: /172.16.150.26; Rack: RAC1",
+            "Host 35":"Datacenter: LONDON; Host: /172.16.150.27; Rack: RAC1",
+            "Host 36":"Datacenter: LONDON; Host: /172.16.150.28; Rack: RAC1",
+            "Keyspace":"unstructured_text",
+            "Number of hosts connected to":"10",
+            "Open Connections":"51",
+            "Trashed Connections":"0",
+            "Known Hosts":"36",
+            "Total Requests":"10830696"
+          }
+        }
+      },
+      "error":false
+    }
+  ]
+}

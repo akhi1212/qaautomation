@@ -1,0 +1,4 @@
+APP_URL=http://lcoa-dvvd-xap1.autodatacorp.org:8080/vin-description-service/
+APP_ENVIRONMENT=DEV
+APP_VERSION=0.0.0-54280
+STORM_ENVIRONMENT=DEVELOP

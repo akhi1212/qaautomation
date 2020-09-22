@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "ID-cmattis10-1591206371336-0-219",
+  "serverTime": "Wed Jun 03 12:58:04 PDT 2020",
+  "error": false,
+  "executionTimeMS": 413,
+  "copyright": "Copyright 2020 Autodata, Inc. dba ChromeData",
+  "result": {
+    "vinProcessed": "1G1PC5SB1E7428104",
+    "styles": [
+      {
+        "styleId": 357400,
+        "styleDescription": "",
+        "trimDescription": "1LT",
+        "baseMSRP": 19910.0,
+        "driveType": "FWD",
+        "bodyType": "",
+        "gvwrLow": "4321"
+      }
+    ],
+    "engines": [
+      {
+        "featureId": "21690",
+        "featureKey": "21690-FAB0503",
+        "description": "I4",
+        "styles": [
+          {
+            "styleId": "357400"
+          }
+        ]
+      }
+    ],
+    "transmissions": [
+      {
+        "featureId": "10500",
+        "featureKey": "10500-FCB016000202",
+        "description": "6-speed automatic"
+      }
+    ],
+    "exteriorColors": [
+      {
+        "code": "G7C",
+        "name": "Red",
+        "genericName": "Red Hot",
+        "styleIds": [
+          "357400"
+        ]
+      },
+      {
+        "code": "G7J",
+        "name": "Green",
+        "genericName": "Rainforest Green Metallic",
+        "styleIds": [
+          "357400"
+        ]
+      },
+      {
+        "code": "GAN",
+        "name": "Silver",
+        "genericName": "Silver Ice Metallic",
+        "styleIds": [
+          "357400"
+        ]
+      },
+      {
+        "code": "GAR",
+        "name": "Black",
+        "genericName": "Black Granite Metallic",
+        "styleIds": [
+          "357400"
+        ]
+      },
+      {
+        "code": "GAZ",
+        "name": "White",
+        "genericName": "Summit White",
+        "styleIds": [
+          "357400"
+        ]
+      },
+      {
+        "code": "GWT",
+        "name": "Beige",
+        "genericName": "Champagne Silver Metallic",
+        "styleIds": [
+          "357400"
+        ]
+      },
+      {
+        "code": "GWY",
+        "name": "Blue",
+        "genericName": "Atlantis Blue Metallic",
+        "styleIds": [
+          "357400"
+        ]
+      },
+      {
+        "code": "GXG",
+        "name": "Gray",
+        "genericName": "Tungsten Metallic",
+        "styleIds": [
+          "357400"
+        ]
+      }
+    ]
+  }
+}

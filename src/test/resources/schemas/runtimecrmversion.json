@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "serverTime":1591035460927,
+  "serverTimeString":"2020-06-01T18:17:40.927Z",
+  "serverName":"runtime-crm-service-develop-5db7bdc886-nn8vb (10.42.2.149) ",
+  "executionTimeMS":1,
+  "result":{"versions":{"Web Service":"1.2.4.81","CPP Library":"1.2.2.30_20200506124715"}},
+  "error":false}
+
