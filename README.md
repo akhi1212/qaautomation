@@ -9,16 +9,6 @@ Then type in regular gradle commands, like:
 gradle test --tests org.autodatacorp.vindescription.service.*
 ```
 
-Do similar READMEs for:
-
-- **API repo**: list endpoints covered, tools used, how to run tests.  
-- **BDD repo**: show 1–2 `feature` files and how to execute via `pytest-bdd` / `behave`.  
-- **Performance repo**: describe JMeter scripts, load model, sample report + your analysis.
-
-Good README = most of the “attractive” feeling.
-
-## 3. Organize folders inside repos
-
 Example for UI framework:
 
 ```text
